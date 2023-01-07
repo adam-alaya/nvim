@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
         end
     }
     use { "EdenEast/nightfox.nvim", as = "nightfox" }
+    use { 'folke/tokyonight.nvim', as = "tokyonight"}
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-lua/plenary.nvim')
     use('ThePrimeagen/harpoon')
