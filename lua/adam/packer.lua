@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use 'airblade/vim-gitgutter'
     use('tpope/vim-fugitive')
+    use 'voldikss/vim-floaterm'
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
@@ -73,16 +74,7 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     -- CoC
-    use {
-        "neoclide/coc.nvim",
-        { branch="release"}
-    }
-    use {
-        "yaegassy/coc-volar",
-        -- { do = "yarn install"}
-    }
-    use {
-        "yaegassy/coc-volar-tools",
-        -- { do = "yarn install"}
-    }
+    use { "neoclide/coc.nvim", branch="release" }
+    use { "yaegassy/coc-volar", run = "yarn install"}
+    use { "yaegassy/coc-volar-tools", run = "yarn install"}
 end)
