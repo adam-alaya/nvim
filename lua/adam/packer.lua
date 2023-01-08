@@ -71,4 +71,17 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    -- CoC
+    use {
+        "neoclide/coc.nvim",
+        { branch="release"}
+    }
+    use {
+        "yaegassy/coc-volar",
+        -- { do = "yarn install"}
+    }
+    use {
+        "yaegassy/coc-volar-tools",
+        -- { do = "yarn install"}
+    }
 end)
