@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
             }
         end
     }
+    use "terrortylor/nvim-comment"
     -- Testing
     use 'vim-test/vim-test'
 
