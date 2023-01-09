@@ -19,18 +19,27 @@ return require('packer').startup(function(use)
         end
     }
     use { "EdenEast/nightfox.nvim", as = "nightfox" }
-    use { 'folke/tokyonight.nvim', as = "tokyonight"}
+    use { 'folke/tokyonight.nvim', as = "tokyonight" }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-lua/plenary.nvim')
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
-    use 'airblade/vim-gitgutter'
+    -- use 'airblade/vim-gitgutter'
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
     use('tpope/vim-fugitive')
     use 'voldikss/vim-floaterm'
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    use 'nvim-tree/nvim-web-devicons'
+    use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
 
     use {
         "folke/trouble.nvim",
@@ -74,7 +83,7 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     -- CoC
-    use { "neoclide/coc.nvim", branch="release" }
-    use { "yaegassy/coc-volar", run = "yarn install"}
-    use { "yaegassy/coc-volar-tools", run = "yarn install"}
+    use { "neoclide/coc.nvim", branch = "release" }
+    use { "yaegassy/coc-volar", run = "yarn install" }
+    use { "yaegassy/coc-volar-tools", run = "yarn install" }
 end)
