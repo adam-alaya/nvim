@@ -32,6 +32,12 @@ return require('packer').startup(function(use)
         end
     }
     use('tpope/vim-fugitive')
+    use {
+        "max397574/better-escape.nvim",
+        config = function()
+            require("better_escape").setup()
+        end,
+    }
     use 'voldikss/vim-floaterm'
     use {
         "windwp/nvim-autopairs",
@@ -57,12 +63,12 @@ return require('packer').startup(function(use)
     use 'vim-test/vim-test'
 
     -- LSP
+    use { 'williamboman/mason.nvim' }
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' },
-            { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
 
             -- Autocompletion
@@ -86,4 +92,8 @@ return require('packer').startup(function(use)
     use { "neoclide/coc.nvim", branch = "release" }
     use { "yaegassy/coc-volar", run = "yarn install" }
     use { "yaegassy/coc-volar-tools", run = "yarn install" }
+
+    -- Debugging
+    use { "leoluz/nvim-dap-go" }
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 end)
