@@ -40,9 +40,10 @@ vim.keymap.set("n", "<leader>e", '<cmd>:FloatermNew --autoclose=3 go run .<CR>')
 vim.keymap.set("n", "<leader>er", '<cmd>:FloatermNew<CR>')
 
 -- Debugging keymaps
+vim.keymap.set( "n", "<leader>dt", ":lua require('dap-go').debug_test()<CR>")
 vim.keymap.set( "n", "<leader>dd", ":lua require('dapui').toggle()<CR>" )
-vim.keymap.set( "n", "<leader>db", ":lua require('dap').toggle_breakpoint()<CR>" )
-vim.keymap.set( "n", "<leader>dc", ":lua require('dap').continue()<CR>" )
+vim.keymap.set( "n", "<leader>b", ":lua require('dap').toggle_breakpoint()<CR>" )
+vim.keymap.set( "n", "<leader>c", ":lua require('dap').continue()<CR>" )
 
 vim.keymap.set( "n", "<F1>", ":lua require('dap').step_over()<CR>" )
 vim.keymap.set( "n", "<F2>", ":lua require('dap').step_into()<CR>" )
@@ -65,7 +66,7 @@ vim.keymap.set( "n", "<Leader>dbc", ":lua require('dap').set_breakpoint(vim.fn.i
 vim.keymap.set( "n", "<Leader>dbm", ":lua require('dap').set_breakpoint({ nil, nil, vim.fn.input('Log point message: ') )<CR>" )
 vim.keymap.set( "n", "<Leader>dbt", ":lua require('dap').toggle_breakpoint()<CR>" )
 
-vim.keymap.set( "n", "<F5>", ":lua require('dap.ui.variables').scopes()<CR>" )
+vim.keymap.set( "n", "<F6>", ":lua require('dap.ui.variables').scopes()<CR>" )
 vim.keymap.set( "n", "<Leader>di", ":lua require('dapui').toggle()<CR>" )
 vim.keymap.set( "n", "<Leader>dsc", ":lua require('dap').continue()<CR>" )
 
