@@ -71,3 +71,4 @@ vim.keymap.set( "n", "<Leader>di", ":lua require('dapui').toggle()<CR>" )
 vim.keymap.set( "n", "<Leader>dsc", ":lua require('dap').continue()<CR>" )
 
 vim.keymap.set( "t", "<ESC>", '<C-\\><C-n>')
+vim.keymap.set( "n", "<c-m>", ':belowright split |terminal<CR>')
