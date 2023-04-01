@@ -71,4 +71,16 @@ vim.keymap.set( "n", "<Leader>di", ":lua require('dapui').toggle()<CR>" )
 vim.keymap.set( "n", "<Leader>dsc", ":lua require('dap').continue()<CR>" )
 
 vim.keymap.set( "t", "<ESC>", '<C-\\><C-n>')
-vim.keymap.set( "n", "<c-m>", ':belowright split |terminal<CR>')
+vim.keymap.set( "n", "<C-m>", ':belowright split |terminal<CR>')
+vim.keymap.set("n", "<CR>", "<nop>")
+
+-- Marks
+vim.keymap.set("n", "<leader>mh", "mH")
+vim.keymap.set("n", "<leader>mj", "mJ")
+vim.keymap.set("n", "<leader>mk", "mK")
+vim.keymap.set("n", "<leader>ml", "mL")
+
+vim.keymap.set("n", "<leader>h", "'H")
+vim.keymap.set("n", "<leader>j", "'J")
+vim.keymap.set("n", "<leader>k", "'K")
+vim.keymap.set("n", "<leader>l", "'L")
