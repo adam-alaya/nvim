@@ -59,8 +59,10 @@ return require('packer').startup(function(use)
         end
     }
     use "terrortylor/nvim-comment"
+
     -- Testing
     use 'vim-test/vim-test'
+    use 'David-Kunz/Jester'
 
     -- LSP
     use { 'williamboman/mason.nvim' }

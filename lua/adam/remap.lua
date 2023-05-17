@@ -35,7 +35,7 @@ vim.keymap.set("n", "<leader>s", [[:/<C-r><C-w>]])
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- vim.keymap.set("n", "<leader>tt", '<cmd>FloatermNew --autoclose=3 docker-compose exec webapp npm run test -- %:t<CR>')
+-- vim.keymap.set("n", "<leader>tt", '<cmd>FloatermNew --autoclose=3 npm run test -- %:t<CR>')
 vim.keymap.set("n", "<leader>e", '<cmd>:FloatermNew --autoclose=3 go run .<CR>')
 vim.keymap.set("n", "<leader>er", '<cmd>:FloatermNew<CR>')
 
@@ -75,12 +75,12 @@ vim.keymap.set( "n", "<C-m>", ':belowright split |terminal<CR>')
 vim.keymap.set("n", "<CR>", "<nop>")
 
 -- Marks
-vim.keymap.set("n", "<leader>mh", "mH")
-vim.keymap.set("n", "<leader>mj", "mJ")
-vim.keymap.set("n", "<leader>mk", "mK")
-vim.keymap.set("n", "<leader>ml", "mL")
-
-vim.keymap.set("n", "<leader>h", "'H")
-vim.keymap.set("n", "<leader>j", "'J")
-vim.keymap.set("n", "<leader>k", "'K")
-vim.keymap.set("n", "<leader>l", "'L")
+-- vim.keymap.set("n", "<leader>mh", "mH")
+-- vim.keymap.set("n", "<leader>mj", "mJ")
+-- vim.keymap.set("n", "<leader>mk", "mK")
+-- vim.keymap.set("n", "<leader>ml", "mL")
+--
+-- vim.keymap.set("n", "<leader>h", "'H")
+-- vim.keymap.set("n", "<leader>j", "'J")
+-- vim.keymap.set("n", "<leader>k", "'K")
+-- vim.keymap.set("n", "<leader>l", "'L")
