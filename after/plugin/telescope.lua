@@ -6,6 +6,7 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>a', ':Telescope lsp_document_symbols<CR>')
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 

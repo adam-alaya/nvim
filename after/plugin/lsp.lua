@@ -4,7 +4,7 @@ lsp.preset('recommended')
 lsp.ensure_installed({
     'tsserver',
     'eslint',
-    'sumneko_lua',
+    'lua_ls',
 })
 local cmp = require('cmp')
 local cmp_select = { behaviour = cmp.SelectBehavior.Select }
