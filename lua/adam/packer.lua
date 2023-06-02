@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
         end
     }
     use "terrortylor/nvim-comment"
-
+    use 'chentoast/marks.nvim'
     -- Testing
     use 'vim-test/vim-test'
     use 'David-Kunz/Jester'
