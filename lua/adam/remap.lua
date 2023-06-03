@@ -35,7 +35,7 @@ vim.keymap.set("n", "<leader>s", [[:/<C-r><C-w>]])
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- vim.keymap.set("n", "<leader>tt", '<cmd>FloatermNew --autoclose=3 npm run test -- %:t<CR>')
+vim.keymap.set("n", "<leader>tt", '<cmd>FloatermNew --autoclose=3 npm run test -- %:t<CR>')
 vim.keymap.set("n", "<leader>e", '<cmd>:FloatermNew --autoclose=3 go run .<CR>')
 vim.keymap.set("n", "<leader>er", '<cmd>:FloatermNew<CR>')
 

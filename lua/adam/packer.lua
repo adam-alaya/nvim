@@ -1,4 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+-- This file can be loaded by calling `lua require('plugins')` from your init.vimpacker
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-lua/plenary.nvim')
     use('ThePrimeagen/harpoon')
+    use 'rcarriga/nvim-notify'
     use('mbbill/undotree')
     -- use 'airblade/vim-gitgutter'
     use {
@@ -63,7 +64,21 @@ return require('packer').startup(function(use)
     -- Testing
     use 'vim-test/vim-test'
     use 'David-Kunz/Jester'
-
+    use { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } }
+    use {
+        "microsoft/vscode-js-debug",
+        opt = true,
+        run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+    }
+    use {
+        "nvim-neotest/neotest",
+        requires = {
+            "haydenmeade/neotest-jest",
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "antoinemadec/FixCursorHold.nvim"
+        }
+    }
     -- LSP
     use { 'williamboman/mason.nvim' }
     use {
